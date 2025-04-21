@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stage {
+    stages {
         stage ('code-pull') {
             steps {
                 git branch: 'dev', url: 'https://github.com/srngx/project-backend.git'
