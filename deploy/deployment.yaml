@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-app
+  labels: 
+    app: backend-app
+spec:  
+  selector:
+    matchlabels:
+      app: backend-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      containers:
+        - name: backend-app
+          image: archsarangx/spring-backend:latest
+          ports:
+            - containerPort: 8080
