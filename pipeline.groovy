@@ -17,8 +17,7 @@ pipeline {
                     docker build . -t archsarangx/spring-backend:latest
                     docker push archsarangx/spring-backend:latest
                     docker rmi archsarangx/spring-backend:latest
-
-                    kubectl apply -f ./deploy/deployment.yaml
+                    kubectl apply -f ./deploy/
                 '''
                 
             }
